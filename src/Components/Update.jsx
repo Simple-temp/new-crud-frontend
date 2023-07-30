@@ -21,7 +21,7 @@ const Update = () => {
 
     const handlegetData = async () => {
         try{
-            const { data } =await axios.get(`http://localhost:4000/todo/gettodobyid/${id}`)
+            const { data } =await axios.get(`https://new-crud-backend.onrender.com/todo/gettodobyid/${id}`)
             setGetData(data)
         }catch(err){
             console.log(err)
@@ -44,7 +44,7 @@ const Update = () => {
         inputData.append("img", formData.img)
 
         try{
-            const { data } = await axios.put(`http://localhost:4000/todo/updatetodo/${id}`, inputData)
+            const { data } = await axios.put(`https://new-crud-backend.onrender.com/todo/updatetodo/${id}`, inputData)
             if(data){
                 toast.success("Updated Succesfully")
                 navigate("/showdata")
@@ -82,7 +82,7 @@ const Update = () => {
                     </Form>
                 </Col>
                 <Col lg={6} md={6} sm={12}>
-                    <img src={`http://localhost:4000/uploads/${getData.img}`} alt="this is a avater image" className='img-fluid w-100 d-block' />
+                    <img src={`https://new-crud-backend.onrender.com/uploads/${getData.img}`} alt="this is a avater image" className='img-fluid w-100 d-block' />
                 </Col>
             </Row>
         </Container>

@@ -26,7 +26,7 @@ const Home = () => {
 
 
         try{
-            const { data } = await axios.post("http://localhost:4000/todo/posttodo", inputData)
+            const { data } = await axios.post("https://new-crud-backend.onrender.com/todo/posttodo", inputData)
             if(data){
                 navigate("/showdata")
             }
